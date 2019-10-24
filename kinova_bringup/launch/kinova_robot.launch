@@ -33,4 +33,11 @@
     </node>
   </group>
 
+  <node name="$(arg kinova_robotName)_follow_joint_trajectory" pkg="kinova_driver" type="joint_trajectory_action_server" output="screen" cwd="node" args="$(arg kinova_robotType)">
+  </node>
+
+  <node name="$(arg kinova_robotName)_griper_command" pkg="kinova_driver" type="gripper_command_action_server" output="screen" cwd="node" args="$(arg kinova_robotType)">
+  </node>
+
+
 </launch>
